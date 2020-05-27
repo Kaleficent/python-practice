@@ -32,7 +32,7 @@ def valid(guess):
 
 #Compare to random
 def result(num, guess, count):
-	if not(guess.isdigit()):
+	if guess == "exit":
 		return count
 
 	if guess > num:
