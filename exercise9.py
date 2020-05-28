@@ -32,9 +32,6 @@ def valid(guess):
 
 #Compare to random
 def result(num, guess, count):
-	if guess == "exit":
-		return count
-
 	if guess > num:
 		print("Your guess was too high. Guess again.")
 	elif guess < num:
@@ -51,9 +48,6 @@ while guess != "exit":
 	guess = valid(guess)
 	count = result(num, guess, count)
 
-#	print("You guessed " + guess + ".")
-#	print("The random number was " + num + ".")
-	
 	if guess == num:
 		num = str(random.randint(1,9))
 		corr += 1
