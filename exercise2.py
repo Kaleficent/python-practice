@@ -11,8 +11,8 @@ Extras:
 """
 
 number = "x"
-while number.isdigit() == False:
-	number = input("Please enter a whole number: ")
+while number.isdigit() == False or number(int) < 1:
+	number = input("Please enter a whole non-zero number: ")
 number = int(number)
 
 remainder = number % 2
@@ -27,8 +27,8 @@ else:
 	print(str(number) + " is odd.")
 	
 check = "y"
-while check.isdigit() == False:
-	check = input("Please enter another whole number. ")
+while check.isdigit() == False or int(check) < 1:
+	check = input("Please enter another whole non-zero number. ")
 check = int(check)
 
 divisible = number % check
