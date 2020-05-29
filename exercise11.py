@@ -3,6 +3,7 @@ From: https://www.practicepython.org/exercise/2014/04/16/11-check-primality-func
 
 Ask the user for a number and determine whether the number is prime or not. (For those who have forgotten, a prime number is a number that has no divisors.). You can (and should!) use your answer to Exercise 4 to help you.
 """
+import math
 
 # Check that a non-zero natural number has been entered
 def valid(number):
@@ -12,9 +13,10 @@ def valid(number):
     return number
 
 # Check primality of a number
-def prime(number, divisor):
+def prime(number):
     isprime = []
-    for element in divisor:
+    root = math.sqrt(number)
+    for element in range(2, int(root)):
         # Check for a remainder
         if number % element == 0:
             isprime.append(element)
@@ -23,9 +25,7 @@ def prime(number, divisor):
             print(str(number) + " is not prime.")
             return number
     print(str(number) + " is prime.")
-    return number
 
 num = "a"
 num = valid(num)
-div = range(2, num)
-prime(num, div)
+prime(num)
