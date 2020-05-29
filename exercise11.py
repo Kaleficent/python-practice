@@ -11,7 +11,7 @@ def valid(number):
     number = int(number)
     return number
 
-# Check if a number is divisible by any other smaller numbers
+# Check primality of a number
 def prime(number, divisor):
     isprime = []
     for element in divisor:
