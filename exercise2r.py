@@ -5,7 +5,7 @@ check = "b"
 
 # Check that a whole number has been entered
 def valid(number):
-	while number.isdigit() == False or int(number) < 1:
+	while number.isdigit() == False or int(number) == 0:
 		number = input("Please enter a whole non-zero number: ")
 	return number
 
