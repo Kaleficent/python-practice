@@ -23,7 +23,7 @@ def prime(number):
         # Check for elements in isprime and breaks at first such element
         if len(isprime) != 0:
             print(str(number) + " is not prime.")
-            return number
+            return
     print(str(number) + " is prime.")
 
 num = "a"
